@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{forest}
+\usepackage{pdfpages}
+\usepackage{catchfile}
+\usepackage{hyperref}
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+
+\lhead{Joel Ho Eng Kiat A0200385N}
+\chead{CS3219}
+\rhead{Task A1}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\begin{document}
+    Link to GitHub repo \href{https://github.com/JoelHo/cs3219-assignments/tree/master/task_a1}{https://github.com/JoelHo/cs3219-assignments/tree/master/task\_a1}\\
+
+    To run the Docker containers:
+
+    \texttt{docker-compose build}
+
+    \texttt{docker-compose up -d}\\
+
+    Then go to \href{http://localhost:8080/}{http://localhost:8080/} to view the default page served on the reverse proxy. It contains links to access the different servers hidden behind it, which are networked to the proxy via docker.
+
+    This can be verified by looking at the server IP and source url that \texttt{nginx} will replace in the response on each server.\\
+
+    This is an implementation of a reverse proxy using \texttt{nginx}, forwarding requests to 2 different webservers (also on \texttt{nginx}). This was chosen to demonstrate better the one of the typical use cases of a reverse proxy, to forward requests to 2 different servers.
+    This can be verified by looking at the server ip and source url that nginx will replace in the response on each server.\\
+
+    While I have setup a simple reverse proxy on nginx before for my personal projects, using Docker was relatively new to me, and thus I wanted to learn how to setup a multi-container Docker application (since that is one of the primary applications of Docker). In doing so, I have learnt more amount about using \texttt{docker-compose}, and how Docker networking works, through trial and error.
+\end{document}
