@@ -1,9 +1,7 @@
 # Task A1
----
 This folder contains a reverse proxy using ngnix, fowarding requests to 2 different webservers (also on nginx). This was chosen to demonstrate better the one of the typical use cases of a reverse proxy, to forward requests to 2 different servers.
 
 ## Running the Docker containers
----
 To build the containers:
 
 ```docker-compose build```
