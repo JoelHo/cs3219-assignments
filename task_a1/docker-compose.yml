@@ -1,0 +1,27 @@
+version: "3"
+services:
+  webserver_a:
+    build: ./webserver_a
+    networks:
+      - webserver_a
+    ports:
+      - "8081:80"
+  webserver_b:
+    build: ./webserver_b
+    networks:
+      - webserver_b
+    ports:
+      - "8082:80"
+  proxy:
+    build: ./proxy
+    networks:
+      - webserver_a
+      - webserver_b
+    ports:
+      - "8080:80"
+
+networks:
+  webserver_a:
+    name: webserver_a_default
+  webserver_b:
+    name: webserver_b_default
