@@ -1,3 +1,6 @@
+# Reference: https://realpython.com/token-based-authentication-with-flask/
+# Reference: https://www.bacancytechnology.com/blog/flask-jwt-authentication
+
 from flask import Flask, request, jsonify, make_response
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
