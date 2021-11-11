@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{forest}
+\usepackage{pdfpages}
+\usepackage{catchfile}
+\usepackage{hyperref}
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+
+\lhead{Joel Ho Eng Kiat A0200385N}
+\chead{CS3219}
+\rhead{Task A2}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\begin{document}
+    Link to GitHub repo \href{https://github.com/JoelHo/cs3219-assignments/tree/master/task_a2}{https://github.com/JoelHo/cs3219-assignments/tree/master/task\_a2}\\
+
+    To run the application:
+
+    \texttt{docker build -t a2 .}
+
+    \texttt{kubectl apply -f a2-deployment.yaml}
+
+    \texttt{kubectl apply -f a2-service.yaml}\\
+
+    Access the "application" at \href{http://localhost:3219/}{http://localhost:3219/}\\
+
+    Teardown:
+
+    \texttt{kubectl delete deployment a2-deployment.yaml}
+
+    \texttt{kubectl delete service a2-service.yaml}
+
+    \texttt{docker image rm a2}\\
+
+
+
+\end{document}
