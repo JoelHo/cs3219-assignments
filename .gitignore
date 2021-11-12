@@ -290,3 +290,5 @@ TSWLatexianTemp*
 #*Notes.bib
 
 .idea/
+
+node_modules/
