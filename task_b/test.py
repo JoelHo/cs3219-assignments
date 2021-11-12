@@ -2,7 +2,7 @@ import pytest
 import json
 import os
 from main import app, db, entry, delete_entry
-
+db.create_all()
 
 @pytest.fixture
 def client():
@@ -87,4 +87,3 @@ def test_delete(client):
     response = json.loads(res.data)
     assert 'message' in response
     assert 'entry deleted' in response['message']
-
