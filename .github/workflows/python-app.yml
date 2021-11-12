@@ -31,5 +31,5 @@ jobs:
       working-directory:  ${{env.working-directory}}/
     - name: Test with pytest
       run: |
-        pytest
+        pytest test.py
       working-directory:  ${{env.working-directory}}/
